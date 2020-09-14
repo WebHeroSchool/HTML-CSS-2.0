@@ -1,3 +1,4 @@
+
 .wrapper{
 	width: 80%;
 	margin: auto;
@@ -5,6 +6,7 @@
 .header{
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 100px;
 }
 
 .logo .menu{
@@ -53,6 +55,9 @@ opacity: .7;
 	text-decoration: none;
 	transition: opacity .5s;
 }
+.menu_burger{
+	display: none;
+}
 .menu__item_active::after{
 	position: absolute;
 	display: block;
@@ -83,31 +88,29 @@ opacity: .7;
 	opacity: 1;
 	width: 100%;
 }
-.main-section{
-	display: flex;
+.main{
+ padding:0 63% 100px 0;
+ background: url(img/mainImg.svg) no-repeat top right;
 }
-.main-content__title{
+
+.main__title{
 font-family: 'PT Serif', serif;
-font-size: 66px;
+font-size: 50px;
 font-weight: bold;
-line-height: 87px;
-display: flex;
-align-items: center;
-margin-top: 206px;
-margin-bottom: 40px;
+line-height: 65px;
+margin: 0 0 40px 0;
 }
-.main-content__description{
+.main__title-text_highlight{
+	background: #ecf3ff;
+}
+.main__subtitle{
 	font-family: 'Roboto', sans-serif;
 	font-size: 22px;
 	font-weight: normal;
 	line-height: 26px;
-	margin: 0px;
+	margin: 0 0 41px 0;
 }
-.image-content{
-	display: flex;
-	margin:170px 0 181px 191px;	
-}
-.main-content__button{
+.main__button{
 	background: #0056EC;
     border-radius: 4px;
     color: white;
@@ -116,5 +119,46 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 21px;
-margin-top: 41px;
+padding: 14px 16px;
+text-decoration: none;
+transition: background-color .5s;
+}
+.main__button:hover{
+	background-color:#191970;
+}
+@media (max-width: 768px) {
+	.menu{
+		display: none;
+	}
+	.logo__text{
+		display: none;
+	}
+	.menu_burger{
+		display: flex;
+		align-items: center;
+		width: 25px;
+		height: 17px;
+		padding:40px 0;
+		background: url(img/rectangle.svg) no-repeat center;
+	}
+	.header{
+		margin-bottom: 28px;
+	}
+	.main{
+		text-align: center;
+		padding: 74% 0 0;
+		background-size: 74%;
+		background-position: top center;
+	}
+	.main__title{
+		margin-bottom: 44px;
+		font: bold 30px/39px pt_serif, arial, helvetica, sans-serif;
+	}
+	.main__subtitle{
+		margin-bottom: 25px;
+		font: 500 16px/19px Roboto, arial, helvetica, sans-serif;
+	}
+	.main__button{
+		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+	}
 }
