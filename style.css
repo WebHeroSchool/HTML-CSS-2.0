@@ -111,6 +111,7 @@ margin: 0 0 40px 0;
 	margin: 0 0 41px 0;
 }
 .main__button{
+	animation: button_animation 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both;
 	background: #0056EC;
     border-radius: 4px;
     color: white;
@@ -125,6 +126,7 @@ transition: background-color .5s;
 }
 .main__button:hover{
 	background-color:#191970;
+	animation: none;
 }
 @media (max-width: 768px) {
 	.menu{
@@ -160,5 +162,32 @@ transition: background-color .5s;
 	}
 	.main__button{
 		font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+	}
+}
+@media (max-width: 320px) {
+	.header{
+		margin-bottom: 10px;
+	}
+.main__title{
+	margin-bottom: 10px;
+}
+}
+@media (min-width: 1920px) {
+.menu{
+    font-weight: 500;
+    font-size: 18px;
+}
+.main__title{
+	font-size: 66px;
+    line-height: 87px;
+}
+}
+
+@keyframes button_animation{
+	0% {
+		box-shadow: 0 0 0 0;
+	}
+	100% {
+		box-shadow: 0 10px 50px #00BFFF; 
 	}
 }
