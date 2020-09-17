@@ -269,7 +269,6 @@ transition: background-color .5s;
 	visibility: hidden;
 }
 #popup:checked ~ * .menu_cross{
-	visibility: visible;
 		position: absolute;
 		left: 92%;
 		top: 0px;
