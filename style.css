@@ -247,7 +247,7 @@ transition: background-color .5s;
 	background: white;
 	left: -100%;
 	top: 0px;
-	padding: 174px 0 0 12px;
+	padding: 174px 0 0 0px;
 	transition: 2s;
 }
 .menu__item_active:after{
